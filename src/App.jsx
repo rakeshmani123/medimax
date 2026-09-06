@@ -7,6 +7,8 @@ import Products from './pages/Products.jsx';
 import ProductDetail from './pages/ProductDetail.jsx';
 import OurBrand from './pages/OurBrand.jsx';
 import Contact from './pages/Contact.jsx';
+import ComingSoon from './pages/ComingSoon.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -35,6 +37,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/our-brand" element={<OurBrand />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

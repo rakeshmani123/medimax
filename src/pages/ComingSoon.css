@@ -1,0 +1,135 @@
+.coming-soon {
+  font-family: var(--font-body);
+  color: var(--color-deep-teal);
+  background: var(--color-cream);
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon__blob {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+.coming-soon__blob--teal {
+  top: 8%;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  background: var(--color-teal);
+  opacity: 0.08;
+  border-radius: 50%;
+}
+.coming-soon__blob--lime {
+  bottom: 12%;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: var(--color-lime);
+  opacity: 0.12;
+  border-radius: 50%;
+}
+.coming-soon__blob--deep {
+  top: 40%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  background: var(--color-deep-teal);
+  opacity: 0.04;
+  border-radius: 0 80px 0 0;
+}
+
+.coming-soon__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  padding: 32px;
+  text-align: center;
+}
+
+.coming-soon__badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--color-lime);
+  color: var(--color-deep-teal);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.coming-soon__title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.coming-soon__accent {
+  color: var(--color-teal);
+}
+
+.coming-soon__desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text-dark);
+  margin: 20px auto 0;
+  max-width: 48ch;
+}
+
+.coming-soon__newsletter {
+  display: flex;
+  gap: 10px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+.coming-soon__input {
+  flex: 1;
+  max-width: 280px;
+  padding: 12px 18px;
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  background: var(--color-white);
+  color: var(--color-deep-teal);
+  outline: none;
+}
+.coming-soon__input:focus {
+  border-color: var(--color-teal);
+}
+
+.coming-soon__btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-deep-teal);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.coming-soon__btn:hover {
+  background: var(--color-teal);
+}
+
+@media (max-width: 500px) {
+  .coming-soon__newsletter {
+    flex-direction: column;
+    align-items: center;
+  }
+  .coming-soon__input {
+    max-width: 100%;
+    width: 100%;
+  }
+}
