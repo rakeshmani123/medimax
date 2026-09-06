@@ -1,6 +1,6 @@
 # MediMax Global Website
 
-Website resmi MediMax Global — platform healthcare products.
+MediMax Global is a modern healthcare product website built with React. It showcases medical and healthcare products with a clean, professional interface — featuring product catalogs, service information, brand story, and multilingual support.
 
 ## Tech Stack
 
@@ -8,7 +8,7 @@ Website resmi MediMax Global — platform healthcare products.
 - **React Router DOM** — client-side routing
 - **Oxlint** — linting
 
-## Struktur Project
+## Project Structure
 
 ```
 src/
@@ -19,66 +19,52 @@ src/
 └── styles/         # CSS tokens & global styles
 ```
 
-## Local Development
+## Development
 
 ```bash
 # Install dependencies
 npm install
 
-# Run dev server (http://localhost:5173)
+# Run dev server
 npm run dev
+# → http://localhost:5173
 
-# Build untuk production
+# Lint
+npm run lint
+```
+
+## Production Build
+
+```bash
+# Build for production
 npm run build
 
-# Preview build result
+# Preview the build locally
 npm run preview
 ```
 
-## Deployment Workflow
+The build output goes into the `dist/` folder. This is what you upload to your hosting server.
 
-### Vercel (Recommended — Auto Deploy)
+## Deployment
 
-1. Login ke [vercel.com](https://vercel.com) pakai akun GitHub
-2. Klik **Add New Project** → pilih repo `rakeshmani123/medimax`
-3. Vercel otomatis detect Vite → langsung deploy
-4. Setiap push ke `main`, Vercel auto build & deploy
+This project is a **static site** after build. Any hosting platform that supports static files will work.
 
-**Custom Domain (medimaxglobal.com):**
-- Buka project di Vercel → Settings → Domains
-- Tambah `medimaxglobal.com`
-- Update **DNS records** di Hostinger:
-  ```
-  Type: A
-  Name: @
-  Value: 76.76.21.21
+### Manual Upload
 
-  Type: CNAME
-  Name: www
-  Value: cname.vercel-dns.com
-  ```
+1. Run `npm run build`
+2. Upload the entire `dist/` folder contents to your hosting's file manager or via FTP/SFTP
 
-### Hostinger (Manual)
+### Git-based Auto Deploy
 
-Kalau pakai hosting Hostinger langsung:
+If your hosting supports Git deployment (e.g. Hostinger, Netlify, Cloudflare Pages), configure it to run:
 
 ```bash
-# Build dulu
-npm run build
-
-# Upload isi folder dist/ ke hPanel File Manager
-# (bukan source code mentah!)
+npm install && npm run build
 ```
 
-> ⚠️ React/Vite **tidak bisa** langsung di-serve tanpa build. Yang di-upload harus isi folder `dist/`.
+Then point the serving directory to `dist/`.
 
-## Contributing
-
-1. Fork / clone repo
-2. Buat branch baru: `git checkout -b fitur/nama-fitur`
-3. Commit: `git commit -m "add: deskripsi"`
-4. Push: `git push origin fitur/nama-fitur`
-5. Buka Pull Request
+> **Important:** Do NOT upload the source code directly. React/Vite projects must be built first. The server needs to serve the `dist/` folder, not the project root.
 
 ## License
 
