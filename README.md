@@ -1,16 +1,85 @@
-# React + Vite
+# MediMax Global Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Website resmi MediMax Global — platform healthcare products.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite 8**
+- **React Router DOM** — client-side routing
+- **Oxlint** — linting
 
-## React Compiler
+## Struktur Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/     # Navbar, Footer, reusable UI
+├── pages/          # Home, Products, About, Contact, Services, OurBrand
+├── data/           # Product specs & data
+├── i18n/           # Multi-language support
+└── styles/         # CSS tokens & global styles
+```
 
-## Expanding the Oxlint configuration
+## Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+# Install dependencies
+npm install
+
+# Run dev server (http://localhost:5173)
+npm run dev
+
+# Build untuk production
+npm run build
+
+# Preview build result
+npm run preview
+```
+
+## Deployment Workflow
+
+### Vercel (Recommended — Auto Deploy)
+
+1. Login ke [vercel.com](https://vercel.com) pakai akun GitHub
+2. Klik **Add New Project** → pilih repo `rakeshmani123/medimax`
+3. Vercel otomatis detect Vite → langsung deploy
+4. Setiap push ke `main`, Vercel auto build & deploy
+
+**Custom Domain (medimaxglobal.com):**
+- Buka project di Vercel → Settings → Domains
+- Tambah `medimaxglobal.com`
+- Update **DNS records** di Hostinger:
+  ```
+  Type: A
+  Name: @
+  Value: 76.76.21.21
+
+  Type: CNAME
+  Name: www
+  Value: cname.vercel-dns.com
+  ```
+
+### Hostinger (Manual)
+
+Kalau pakai hosting Hostinger langsung:
+
+```bash
+# Build dulu
+npm run build
+
+# Upload isi folder dist/ ke hPanel File Manager
+# (bukan source code mentah!)
+```
+
+> ⚠️ React/Vite **tidak bisa** langsung di-serve tanpa build. Yang di-upload harus isi folder `dist/`.
+
+## Contributing
+
+1. Fork / clone repo
+2. Buat branch baru: `git checkout -b fitur/nama-fitur`
+3. Commit: `git commit -m "add: deskripsi"`
+4. Push: `git push origin fitur/nama-fitur`
+5. Buka Pull Request
+
+## License
+
+Private — MediMax Global
