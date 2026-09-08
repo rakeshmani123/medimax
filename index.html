@@ -1,118 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MediMax Global — Coming Soon</title>
-  <link rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAUVBMVEVHcEwOcnUMbHfBzSPCziINcXUOcnUQcnXBzSLBzSLd4xUPcXQIa3gJXXwPcnUPcnUASofI0RnG0BzF0B0QcnXBzSPBzSMPcnTBAF0QcnXBzSPEjcU1AAAAGHRSTlMAvyaxtZ+y6V6PEWhJEV32HDZreuGm+oIzJVdmAAAAdUlEQVQYlV3N2xLCIAxF0RME0kKhV3XS//9Qg0ylsp/ImkwASmHU1sk59/7OGE7NKtB8B31M3EO/kSLCoNkCT5icDcbzajMicjR4Ba/ADbZF/mAHVVjtQ9tDImHvKdZvsbhZOOFXuS++zcg9xAJ0A3Mwc733AU29CzNVimPIAAAAAElFTkSuQmCC" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --deep-teal: #0C3832;
-      --teal: #117A85;
-      --lime: #B3D435;
-      --cream: #F6F8F2;
-      --text-dark: #3E554B;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Public Sans', sans-serif;
-      background: var(--cream);
-      color: var(--deep-teal);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .blob {
-      position: absolute;
-      pointer-events: none;
-    }
-    .blob--teal {
-      top: 8%; right: -60px;
-      width: 240px; height: 240px;
-      background: var(--teal); opacity: 0.08;
-      border-radius: 50%;
-    }
-    .blob--lime {
-      bottom: 12%; left: -40px;
-      width: 200px; height: 200px;
-      background: var(--lime); opacity: 0.12;
-      border-radius: 50%;
-    }
-    .blob--deep {
-      top: 40%; left: 50%;
-      width: 160px; height: 160px;
-      background: var(--deep-teal); opacity: 0.04;
-      border-radius: 0 80px 0 0;
-    }
-
-    .content {
-      text-align: center;
-      padding: 32px;
-      max-width: 640px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 999px;
-      background: var(--lime);
-      color: var(--deep-teal);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      line-height: 1.25;
-    }
-
-    .accent { color: var(--teal); }
-
-    p {
-      font-size: 16px;
-      line-height: 1.65;
-      color: var(--text-dark);
-      margin-top: 20px;
-      max-width: 48ch;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 24px;
-      font-size: 13px;
-      color: var(--text-dark);
-      opacity: 0.6;
-    }
-  </style>
-</head>
-<body>
-  <div class="blob blob--teal"></div>
-  <div class="blob blob--lime"></div>
-  <div class="blob blob--deep"></div>
-
-  <div class="content">
-    <div class="badge">Coming Soon</div>
-    <h1>We're Working on<br /><span class="accent">Something Great</span></h1>
-    <p>Our new website is under construction. Stay tuned for an exciting healthcare experience from MediMax Global.</p>
-  </div>
-
-  <div class="footer">&copy; 2026 MediMax Global. All rights reserved.</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediMax Healthcare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
